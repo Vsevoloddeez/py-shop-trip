@@ -22,11 +22,7 @@ def shop_trip() -> None:
 
         cost_options = {}
         for shop in shops:
-            shop_inst = Shop(
-                shop["name"],
-                shop["location"],
-                shop["products"]
-            )
+            shop_inst = Shop(**shop)
             distance = shop_inst.calculate_trip_distance(customer)
             fuel_cost = (data["FUEL_PRICE"] * car.litres_per_trip(distance))
             total = round(
