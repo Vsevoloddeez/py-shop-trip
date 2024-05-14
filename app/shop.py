@@ -1,7 +1,7 @@
 from typing import Dict
 from math import sqrt
 import datetime
-from dataclasses import dataclass  # Added import for dataclass
+from dataclasses import dataclass  
 
 from app.customer import Customer
 
