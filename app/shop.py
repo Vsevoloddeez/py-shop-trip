@@ -17,7 +17,8 @@ class Shop:
         customer_x, customer_y = customer.location
         return sqrt((shop_x - customer_x) ** 2 + (shop_y - customer_y) ** 2)
 
-    def shopping_cost(self, customer: "Customer") -> float:
+    def shopping_cost(self, customer: Customer) -> float:
+
         total_price = 0
         for product, amount in customer.product_cart.items():
             total_price += self.products.get(product, 0) * amount
